@@ -1,3 +1,4 @@
+//// Gathering HTML elements for manipulation
 var highscorelist = document.getElementById("highscorelist");
 var timer = document.getElementById("timer");
 var introbox = document.getElementById("introbox")
@@ -26,7 +27,7 @@ var footer = document.querySelector("footer");
 var resetbutton = document.getElementById("reset");
 var clearbutton = document.getElementById("clear");
 
-var choice = "";
+//Quiz Question Object
 var Questionslist = [{
         question: "How many elements can you apply an 'ID' attribute to?",
         choiceA: "As many as you want",
@@ -140,7 +141,7 @@ var buttons_map = {
     "btn2": button2,
     "btn3": button3
 };
-
+// Other global variables
 var finalQuestionIndex = Questionslist.length;
 var currentQuestionIndex = 0;
 var currentscore = 0;
@@ -148,10 +149,12 @@ var correct;
 var timeLeft = 90;
 var penalty = 15;
 var timeractive = false;
+var choice = "";
 
-
+//Intro to quiz
 intro();
 
+//Starts the timer
 function intro() {
     timeractive = false;
     introyes.addEventListener("click", startquiz);
@@ -169,7 +172,7 @@ function studymore() {
     resultsdisplay.textContent = "Go study more Javascript...then come back!";
 }
 
-
+//Function that controls the timer
 setInterval(function() {
     if (timeractive) {
         if (timeLeft > 1) {
@@ -187,6 +190,7 @@ setInterval(function() {
     }
 }, 1000);
 
+// This function cycles through the object array containing the quiz questions to generate the current question.Also sets event listeners on each answer selection.
 function quiz() {
     introbox.setAttribute("style", "display:none");
     questionbox.removeAttribute("style", "display:none");
@@ -227,6 +231,7 @@ function checkAnswer(event) {
     quiz();
 }
 
+// This function is the end page screen that displays your score after either completing the quiz or upon timer run out
 function Endquiz() {
     timeractive = false;
     introbox.setAttribute("style", "display:none");
@@ -243,6 +248,7 @@ function Endquiz() {
     });
 }
 
+// This function allows the user to submit their score along with their name
 function submitscore() {
     timeractive = false;
     timer.setAttribute("style", "display:none");
@@ -255,6 +261,8 @@ function submitscore() {
     submit.addEventListener("click", submitfunction)
 }
 
+// On click of the submit button, we run the function highscore that saves and stringifies the array of high scores already saved in local storage
+// as well as pushing the new user name and score into the array we are saving in local storage. Then it runs the function to show high scores.
 function submitfunction(event) {
     timeractive = false;
     event.preventDefault();
@@ -282,6 +290,9 @@ function submitfunction(event) {
     }
 }
 
+
+// On click of the submit button, we run the function highscore that saves and stringifies the array of high scores already saved in local storage
+// as well as pushing the new user name and score into the array we are saving in local storage. Then it runs the function to show high scores.
 function gethighscores() {
     highscorename.innerHTML = "";
     highscorescore.innerHTML = "";
@@ -294,7 +305,7 @@ function gethighscores() {
 }
 
 
-
+//Click event that resets the quiz
 resetbutton.addEventListener("click", () => {
     timer_active = false;
     timeLeft = 90;
@@ -303,7 +314,7 @@ resetbutton.addEventListener("click", () => {
 });
 
 
-
+//Click event that clears the highscore list
 function clear() {
     window.localStorage.clear();
     highscorename.textContent = "";
@@ -311,7 +322,7 @@ function clear() {
 }
 
 
-
+//Function that returns users to quiz home page, resets the timer, and resets the current question
 function resetfunction() {
     timer_active = false;
     highscorelist.removeAttribute("style", "display:none");
@@ -328,6 +339,7 @@ function resetfunction() {
     intro();
 }
 
+//Click event that takes users to highscore page
 highscorelist.addEventListener("click", () => {
     timer_active = false;
     timeLeft = 90;
@@ -335,6 +347,7 @@ highscorelist.addEventListener("click", () => {
     highscorepage();
 });
 
+// This function displays the high scores page while hiding all of the other pages from view
 function highscorepage() {
     highscorelist.setAttribute("style", "display:none");
     timer.setAttribute("style", "display:none");
