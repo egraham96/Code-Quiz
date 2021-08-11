@@ -8,6 +8,13 @@ This week’s homework required us to build a timed coding quiz with multiple-ch
 * CSS
 * Javascript
 
-Link to deployed application: https://egraham96.github.io/homework-assignment-04/                                                                                              
-Link to GitHub Repository: https://github.com/egraham96/homework-assignment-04
+## Deployed Links:
+* [See Live Site](https://egraham96.github.io/homework-assignment-03/)
+* [Link to GitHub Repo](https://github.com/egraham96/homework-assignment-03)
+                                                                                        
+## Preview of Working Site:
 ![Screenshot of Deployed Application](Assets/ScreenshotofDeployedApplication.PNG)
+![Screenshot of Deployed Application](Assets/AnotherScreenshotofDeployedApplication.PNG)
+
+## Contact the Creator:
+* Emma Graham: https://github.com/egraham96
