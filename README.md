@@ -17,7 +17,7 @@ This week’s homework required us to build a timed coding quiz with multiple-ch
 ![Screenshot of Deployed Application](Assets/AnotherScreenshotofDeployedApplication.PNG)
 
 ## Contact the Creator:
-* Emma Graham: https://github.com/egraham96
+Emma Graham: https://github.com/egraham96
 
 ## License:
 ![Github licence](http://img.shields.io/badge/license-MIT-blue.svg)
