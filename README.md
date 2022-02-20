@@ -9,8 +9,8 @@ This week’s homework required us to build a timed coding quiz with multiple-ch
 * Javascript
 
 ## Deployed Links:
-* [See Live Site](https://egraham96.github.io/homework-assignment-04/)
-* [Link to GitHub Repo](https://github.com/egraham96/homework-assignment-04)
+* [See Live Site] (https://egraham96.github.io/Code-Quiz/)
+* [Link to GitHub Repo] (https://github.com/egraham96/Code-Quiz/)
                                                                                         
 ## Preview of Working Site:
 ![Screenshot of Deployed Application](Assets/ScreenshotofDeployedApplication.PNG)
