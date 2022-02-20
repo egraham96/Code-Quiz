@@ -20,6 +20,4 @@ This week’s homework required us to build a timed coding quiz with multiple-ch
 * Emma Graham: https://github.com/egraham96
 
 ## License:
-Copyright (c) <2021><Emma Graham>
-
 ![Github licence](http://img.shields.io/badge/license-MIT-blue.svg)
